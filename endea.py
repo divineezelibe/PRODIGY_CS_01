@@ -19,12 +19,12 @@ def display_intro():
     print(" *                                               *")
     print(" *************************************************")
     print()
-    print(" Welcome to ENDECIFA – Your Caesar Cipher Toolkit! 🔐")
+    print(" Welcome to ENDEA – Your Caesar Cipher Toolkit! 🔐")
     print()
 
 def display_result(result, mode):
     print("==================================================")
-    print("                * ENDECIFA RESULT *               ")
+    print("                * ENDEA RESULT *               ")
     print("==================================================")
     if mode == 'encrypt':
         print(f" Encrypted message: {result}")
