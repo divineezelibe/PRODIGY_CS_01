@@ -27,8 +27,8 @@ To run Endea, all you need is:
 There's no complicated installation process here. Just clone or download this repository, and you're good to go!
 
 ```bash
-git clone https://github.com/yourusername/Endea.git
-cd Endea
+git clone https://github.com/divineezelibe/PRODIGY_CS_01.git
+cd PRODIGY_CS_01
 ```
 
 ---
