@@ -2,7 +2,26 @@
 
 from cipher_service import encrypt, decrypt  # Import the functions from cipher_service.py
 
+def display_intro():
+    print("********************************************")
+    print("*                                          *")
+    print("*         Welcome to CaesarCIFA!           *")
+    print("*          By Divine E Ezelibe             *")
+    print("*                                          *")
+    print("********************************************")
+    print()
+    print("This program allows you to encrypt or decrypt messages using")
+    print("the Caesar Cipher algorithm. You can choose to:")
+    print("  1. Encrypt a message: Convert your plain text into secret code.")
+    print("  2. Decrypt a message: Convert the secret code back into plain text.")
+    print()
+    print("Let's get started!")
+    print()
+
 def main():
+    # Display the introduction
+    display_intro()
+
     # Ask the user whether they want to encrypt or decrypt
     operation = input("Do you want to (E)ncrypt or (D)ecrypt? ").strip().upper()
 
