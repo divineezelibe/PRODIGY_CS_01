@@ -21,18 +21,16 @@ def display_intro():
     print()
     print("🔐 Welcome to ENDECIFA – Your Caesar Cipher Toolkit! 🔐")
     print()
-    print("🔄 With ENDECIFA, you can easily encrypt your messages or")
-    print("   decrypt hidden texts with the power of Caesar Cipher.")
-    print()
-    print("✨ How to use ENDECIFA:")
-    print("   - Use '-e' followed by your text and a shift value to encrypt.")
-    print("   - Use '-d' followed by your text and a shift value to decrypt.")
-    print()
-    print("💡 Example:")
-    print("   To encrypt: python main.py -e 'Hello, World!' 3")
-    print("   To decrypt: python main.py -d 'Khoor, Zruog!' 3")
-    print()
-    print("🔍 Explore the secrets of encryption and decryption with ENDECIFA! 🚀")
+
+def display_result(result, mode):
+    print("==================================================")
+    print("               🛡️ ENDECIFA RESULT 🛡️               ")
+    print("==================================================")
+    if mode == 'encrypt':
+        print(f"🔒 Encrypted message: {result}")
+    elif mode == 'decrypt':
+        print(f"🔓 Decrypted message: {result}")
+    print("==================================================")
     print()
 
 def main():
@@ -53,11 +51,11 @@ def main():
 
     # Determine the operation and call the appropriate function
     if args.encrypt:
-        encrypted_message = encrypt(args.text, args.shift)
-        print(f"🔒 Encrypted message: {encrypted_message}")
+        result = encrypt(args.text, args.shift)
+        display_result(result, 'encrypt')
     elif args.decrypt:
-        decrypted_message = decrypt(args.text, args.shift)
-        print(f"🔓 Decrypted message: {decrypted_message}")
+        result = decrypt(args.text, args.shift)
+        display_result(result, 'decrypt')
     else:
         print("❗ Please specify whether to encrypt (-e) or decrypt (-d) the text.")
 
